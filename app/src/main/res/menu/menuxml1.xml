@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/optionmenu"
+    >
+<!--    <item android:id="@+id/id1"-->
+<!--        android:title="Delete"-->
+<!--        android:orderInCategory="2"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:icon="@drawable/ic_delete"-->
+<!--        android:iconTint="@android:color/white"-->
+<!--        ></item>-->
+
+<!--    <item android:id="@+id/id8"-->
+<!--        android:title="share"-->
+<!--        android:orderInCategory="1"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        android:icon="@drawable/share"-->
+<!--        android:iconTint="@android:color/white"-->
+<!--        ></item>-->
+    <item
+        android:title="Arrange By Alphabetically"
+        android:id="@+id/demoa">
+        <menu>
+            <item android:id="@+id/id2"
+                android:title="A -> Z"
+                android:orderInCategory="2"
+                ></item>
+
+            <item android:id="@+id/id3"
+                android:title="Z -> A"
+                android:orderInCategory="3"
+                ></item>
+        </menu>
+    </item>
+
+    <item android:title="Arrange By Date">
+        <menu>
+            <item android:id="@+id/id4"
+                android:title="Old -> New"
+                android:orderInCategory="3"
+                ></item>
+            <item android:id="@+id/id5"
+                android:title="New -> Old"
+                android:orderInCategory="3"
+                ></item>
+
+        </menu>
+
+    </item>
+
+    <item android:title="Arrange By Size">
+        <menu>
+            <item android:id="@+id/id6"
+                android:title="Small -> Large"
+                android:orderInCategory="3"
+                ></item>
+            <item android:id="@+id/id7"
+                android:title="Large -> Small"
+                android:orderInCategory="3"
+                ></item>
+
+        </menu>
+
+    </item>
+
+    <item
+        android:id="@+id/searchBtn"
+        android:icon="@drawable/searchnew"
+        android:title="Search"
+        app:showAsAction="always" />
+
+
+
+</menu>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar4"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="29dp"
+        tools:ignore="MissingConstraints"
+        android:background="@drawable/mygradient">
+
+        <LinearLayout
+            android:id="@+id/edit_linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/edit_back"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="Search here....."
+                android:textSize="20sp"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:maxLength="20"
+                android:drawableStart="@drawable/ic_search"
+                android:padding="7dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:typeface="serif"/>
+
+            <ImageView
+                android:id="@+id/clear_search"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="3dp"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:src="@drawable/cancel_search_btn"
+                android:tint="@color/actionBarText" />
+
+        </LinearLayout>
+
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/search"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_margin="5dp"-->
+    <!--        android:background="@drawable/edit_back"-->
+    <!--        android:hint="Search here....."-->
+    <!--        android:maxLength="20"-->
+    <!--        android:drawableStart="@drawable/ic_search"-->
+    <!--        android:padding="7dp"-->
+    <!--        android:scrollHorizontally="true"-->
+    <!--        android:singleLine="true"-->
+    <!--        android:typeface="serif"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/refresh">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/listView_pdf"
+                android:divider="#efefef"
+                android:dividerHeight="2dp">
+
+            </ListView>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--            android:id="@+id/refreshBtn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginRight="30dp"-->
+<!--            android:layout_marginBottom="80dp"-->
+<!--            android:clickable="true"-->
+<!--            app:backgroundTint="@android:color/holo_red_light"-->
+<!--            app:srcCompat="@drawable/refresh" />-->
+<!--        <com.baoyz.swipemenulistview.SwipeMenuListView-->
+<!--            android:id="@+id/listView_pdf"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:divider="#efefef"-->
+<!--            android:dividerHeight="5dp">-->
+
+
+<!--        </com.baoyz.swipemenulistview.SwipeMenuListView>-->
+
+<!--        <com.trendyol.bubblescrollbarlib.BubbleScrollBar-->
+<!--            android:id="@+id/bubbleScrollBar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:orientation="vertical"-->
+<!--            app:bubbleBackground="@drawable/my_scroll"-->
+<!--            app:bubbleElevation="6dp"-->
+<!--            app:bubbleHeight="50dp"-->
+<!--            app:bubbleMargin="4dp"-->
+<!--            app:bubbleMinWidth="50dp"-->
+<!--            app:bubblePadding="4dp"-->
+<!--            app:bubbleTextColor="@color/default_bubble_text_color"-->
+<!--            app:bubbleTextSize="8sp"-->
+<!--            app:scrollbarBackground="@drawable/mygradient"-->
+<!--            app:thumbBackground="@color/colorAccent" />-->
+
+
+
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad">
+        </com.google.android.gms.ads.AdView>
+
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:visibility="invisible"/>
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
